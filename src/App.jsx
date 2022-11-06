@@ -31,11 +31,11 @@ function App() {
               <Route path="confirm/:id" element={<ConfirmAccount />} />
             </Route>
 
-            <Route path="/proyectos" element={<ProtectedRoute />}>
+            <Route path="/projects" element={<ProtectedRoute />}>
               <Route index element={<Projects />} />
-              <Route path="crear-proyecto" element={<NewProyect />} />
-              <Route path="nuevo-colaborador/:id" element={<NewCollaborator />} />
-              <Route path="editar/:id" element={<EditProject />} />
+              <Route path="create-project" element={<NewProyect />} />
+              <Route path="new-collaborator/:id" element={<NewCollaborator />} />
+              <Route path="edit/:id" element={<EditProject />} />
               <Route path=":id" element={<Project />} />
             </Route>
           </Routes>

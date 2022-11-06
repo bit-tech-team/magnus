@@ -104,7 +104,7 @@ const ProjectProvider = ({ children }) => {
       const { data } = await axiosClient(`/projects/${id}`, config);
       setProject(data);
     } catch (error) {
-      navigate("/proyectos");
+      navigate("/projects");
       setAlert({
         msg: error.response.data.msg,
         error: true,
@@ -166,7 +166,7 @@ const ProjectProvider = ({ children }) => {
 
       setTimeout(() => {
         setAlert({});
-        navigate("/proyectos");
+        navigate("/projects");
       }, 2300);
     } catch (error) {}
   };
@@ -199,7 +199,7 @@ const ProjectProvider = ({ children }) => {
 
       setTimeout(() => {
         setAlert({});
-        navigate("/proyectos");
+        navigate("/projects");
       }, 2300);
     } catch (error) {
       console.log(error);
@@ -237,7 +237,7 @@ const ProjectProvider = ({ children }) => {
 
       setTimeout(() => {
         setAlert({});
-        navigate("/proyectos");
+        navigate("/projects");
       }, 2300);
     } catch (error) {}
   };

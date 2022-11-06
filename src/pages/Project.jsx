@@ -50,7 +50,7 @@ const Project = () => {
             </svg>
 
             <Link
-              to={`/proyectos/editar/${params.id}`}
+              to={`/projects/edit/${params.id}`}
               className="uppercase font-bold"
             >
               Editar
@@ -99,7 +99,7 @@ const Project = () => {
             <p className="font-bold text-xl">Colaboradores del Proyecto</p>
 
             <Link
-              to={`/proyectos/nuevo-colaborador/${project._id}`}
+              to={`/projects/new-collaborator/${project._id}`}
               className="text-gray-400 hover:text-black uppercase font-bold"
             >
               Añadir

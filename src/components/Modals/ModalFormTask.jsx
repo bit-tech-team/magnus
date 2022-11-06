@@ -31,7 +31,7 @@ const ModalFormTask = () => {
 
     if ([name, description, dateDelivery, priority].includes("")) {
       showAlert({
-        msg: "Todos los campos son obligatorios",
+        msg: "All fields are required",
         error: true,
       });
       return;

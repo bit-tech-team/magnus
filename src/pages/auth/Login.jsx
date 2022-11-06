@@ -4,10 +4,9 @@ import { Link, useNavigate } from "react-router-dom";
 import Alert from "../../components/misc/Alert";
 import axiosClient from "../../config/axiosClient";
 import useAuth from "../../hooks/useAuth";
-import img from "../../assets/banners/Magnus.png"
+import img from "../../assets/banners/magnus-notext.png";
 
 const Login = () => {
-
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [alert, setAlert] = useState({});
@@ -23,7 +22,7 @@ const Login = () => {
 
     if ([email, password].includes("")) {
       setAlert({
-        msg: "Todos los campos son obligatorios",
+        msg: "All fields are required",
         error: true,
       });
       return;
@@ -40,8 +39,7 @@ const Login = () => {
 
       setAuth(data);
 
-      //TODO resolver que navega antes de que se haga la carga de los proyectos
-      navigate("/proyectos");
+      navigate("/projects");
     } catch (error) {
       setAlert({
         msg: error.response.data.msg,
@@ -55,14 +53,16 @@ const Login = () => {
       <div>
         <div className="relative min-h-screen grid !bg-black">
           <div className="flex flex-col sm:flex-row items-center md:items-start sm:justify-center md:justify-start flex-auto min-w-0 ">
-            <div
-              className="relative sm:w-1/2 xl:w-3/5 bg-blue-500 h-full hidden md:flex flex-auto items-center justify-center p-10 overflow-hidden  text-white bg-no-repeat bg-cover"
-              style={{ backgroundImage: `url(${img})` }}
-            >
-              <div className="absolute bg-black  opacity-25 inset-0 z-0"></div>
+            <div className="relative sm:w-1/2 xl:w-3/5 h-full hidden md:flex flex-auto items-center justify-center p-10 overflow-hidden">
+              <img
+                src={img}
+                alt="Magnus Project Manager"
+                className="w-10/12"
+              />
+              {/*          <div className="absolute bg-black  opacity-25 inset-0 z-0"></div>
               <div className="w-full  lg:max-w-2xl md:max-w-md z-10 items-center text-center ">
                 <div className=" font-bold leading-tight mb-6 mx-auto w-full content-center items-center "></div>
-              </div>
+              </div> */}
             </div>
 
             <div className="md:flex md:items-center md:justify-left w-full sm:w-auto md:h-full xl:w-1/2 p-8  md:p-10 lg:p-14 sm:rounded-lg md:rounded-none ">

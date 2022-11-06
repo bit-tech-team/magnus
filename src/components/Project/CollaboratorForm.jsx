@@ -14,7 +14,7 @@ const CollaboratorForm = () => {
 
     if (email === "") {
       showAlert({
-        msg: "El Correo es Obligatorio",
+        msg: "Email is required",
         error: true,
       });
       return;
